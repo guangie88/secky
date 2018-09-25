@@ -15,7 +15,7 @@ use structopt::StructOpt;
 type MainResult = std::result::Result<(), Box<Error>>;
 
 /// Help keying in secrets into file or piped programs.
-/// 
+///
 /// CTRL-D to end the text input, auto-trimming is performed unless trim flags
 /// are set.
 #[derive(StructOpt, Debug)]
@@ -47,10 +47,6 @@ fn run() -> MainResult {
     }
 
     // secret entry (CTRL-D to send EOF)
-    // #[macro_use]
-    // extern crate text_io;
-    // let secret: String = try_read!("{}<<EOF")?;
-
     let mut secret = String::new();
     std::io::stdin().read_to_string(&mut secret)?;
 

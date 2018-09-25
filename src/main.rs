@@ -1,5 +1,3 @@
-#![deny(missing_debug_implementations, warnings)]
-
 extern crate atty;
 #[macro_use]
 extern crate failure;

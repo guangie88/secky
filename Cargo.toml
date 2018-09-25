@@ -2,9 +2,22 @@
 name = "secky"
 version = "0.1.0"
 authors = ["Chen Weiguang <chen.weiguang@gmail.com>"]
+description = "Help keying in secrets into file or piped programs"
+repository = "https://github.com/guangie88/secky"
+readme = "README.md"
+categories = ["command-line-utilities"]
+license = "MIT"
+
+[badges]
+travis-ci = { repository = "guangie88/secky" }
+codecov = { repository = "guangie88/secky" }
 
 [dependencies]
 structopt = "0.2.10"
 structopt-derive = "0.2.10"
 atty = "0.2.11"
 failure = "0.1.2"
+
+[[bin]]
+name = "secky"
+path = "src/main.rs"

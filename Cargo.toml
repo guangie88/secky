@@ -7,5 +7,4 @@ authors = ["Chen Weiguang <chen.weiguang@gmail.com>"]
 structopt = "0.2.10"
 structopt-derive = "0.2.10"
 atty = "0.2.11"
-text_io = "0.1.7"
 failure = "0.1.2"

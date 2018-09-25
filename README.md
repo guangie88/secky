@@ -1,5 +1,8 @@
 # secky
 
+[![Build Status](https://travis-ci.org/guangie88/secky.svg?branch=master)](https://travis-ci.org/guangie88/secky)
+[![Build status](https://ci.appveyor.com/api/projects/status/m4yhnkqhwco6kexu/branch/master?svg=true)](https://ci.appveyor.com/project/guangie88/secky/branch/master)
+
 **SEC**rets **K**e**Y**ing Rust program to help keying in secrets into file or
 piped programs.
 
@@ -22,6 +25,12 @@ Run `secky --help` for more program argument details.
 
 ```bash
 cargo install secky
+```
+
+### Direct (only for Linux)
+
+```bash
+curl -sSf https://raw.githubusercontent.com/guangie88/secky/master/install-linux.sh | sudo sh
 ```
 
 ## Command Examples

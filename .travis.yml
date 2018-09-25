@@ -66,11 +66,6 @@ after_success:
     else
       CARGO_PUBLISH_FLAGS="--dry-run --verbose"
     fi
-
-    # publish all self dependency libraries first
-    cd ignore-lib
-    cargo publish ${CARGO_PUBLISH_FLAGS}
-    cd ..
     
     # then publish binary
     cargo publish ${CARGO_PUBLISH_FLAGS}

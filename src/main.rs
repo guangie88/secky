@@ -3,9 +3,8 @@
 extern crate atty;
 #[macro_use]
 extern crate failure;
-extern crate structopt;
 #[macro_use]
-extern crate structopt_derive;
+extern crate structopt;
 
 use atty::Stream;
 use std::io::Read;

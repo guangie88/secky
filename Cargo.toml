@@ -14,7 +14,6 @@ codecov = { repository = "guangie88/secky" }
 
 [dependencies]
 structopt = "0.2.10"
-structopt-derive = "0.2.10"
 atty = "0.2.11"
 failure = "0.1.2"
 

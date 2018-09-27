@@ -14,8 +14,10 @@ accidentally introduced at the end of the file.
 
 The program doesn't allow echoing into TTY for `stdout` unless `-f` is set.
 
-Press CTRL-D to end the text input. Auto-trimming is performed unless trim flags
-are set.
+Press CTRL-D to generate EOF char for ending the text input. You will need to
+enter it twice if no newline character is entered prior to the EOF char.
+
+Auto-trimming is performed unless trim flags are set.
 
 Run `secky --help` for more program argument details.
 
@@ -37,94 +39,63 @@ curl -sSf https://raw.githubusercontent.com/guangie88/secky/master/install-linux
 
 ### Print to `stdout`
 
-#### Method 1
-
-Command:
+#### `cat` Method
 
 ```bash
+# Command
 secky | cat
-```
 
-Input entry:
+# Input
+hello(CTRL-D x2)
 
-```bash
-hello
-(CTRL-D)
-```
-
-Echo (no newline at the end):
-
-```bash
+# `cat` output (no newline at the end)
 hello
 ```
 
-#### Method 2
-
-Command:
+#### Force Stdout flag Method
 
 ```bash
+# Command
 secky -f
-```
 
-Input entry:
+# Input
+hello(CTRL-D x2)
 
-```bash
-hello
-(CTRL-D)
-```
-
-Echo (no newline at the end):
-
-```bash
+# Output (no newline at the end)
 hello
 ```
 
 ### Print to file
 
-Command:
-
 ```bash
+# Command
 secky > secret.txt
-```
 
-Input entry:
+# Input
+hello(CTRL-D x2)
 
-```bash
-hello
-(CTRL-D)
-```
-
-Check (no newline at the end):
-
-```bash
+# Verification command
 cat secret.txt
+
+# Output (no newline at the end)
 hello
 ```
 
 ### Pipe to other programs
 
-Command:
-
 ```bash
+# Command
 secky | md5sum
-```
 
-Input entry:
+# Input
+hello(CTRL-D x2)
 
-```bash
-hello
-(CTRL-D)
-```
-
-Echo:
-
-```bash
+# Output
 5d41402abc4b2a76b9719d911017c592  -
-```
 
-Check:
-
-```bash
+# Verification command
 echo -n "hello" | md5sum
+
+# Output
 5d41402abc4b2a76b9719d911017c592  -
 ```
